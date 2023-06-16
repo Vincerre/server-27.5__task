@@ -4,5 +4,8 @@
     "nodemon": "^2.0.22",
     "shortid": "^2.2.16",
     "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "start": "yarn run nodemon server.js"
   }
 }
