@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 const ConcertController = require('../controllers/concerts.controller');
 
-router.route('/', ConcertController.getAll);
+router.get('/', ConcertController.getAll);
 
-router.route('/', ConcertController.add);
+router.post('/', ConcertController.add);
 
-router.route('/:id', ConcertController.getById);
+router.get('/:id', ConcertController.getById);
 
-router.route('/:id', ConcertController.edit);
+router.put('/:id', ConcertController.edit);
 
-router.route('/:id', ConcertController.delete);
+router.delete('/:id', ConcertController.delete);
 
 module.exports = router;
