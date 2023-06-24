@@ -34,11 +34,7 @@ exports.edit = async (req, res) => {
     const { day, seat, client, email } = req.body;
     const newSeat = await Seat.findById(req.params.id);
     if (newSeat) {
-      newSeat.day = day;
-      newSeat.seat = seat;
-      newSeat.client = client;
-      newSeat.email = email;
-      await newSeat.save();
+      await Seat.updateOne({ _id: req.params.id }, { $set: { day: day, seat: seat, client: client, email: email } });
       res.json({ message: 'Updated', updated: newSeat });
     }
   } catch (err) {
