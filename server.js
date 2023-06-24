@@ -29,10 +29,8 @@ app.use((req, res) => {
   res.status(404).send('404 not found...');
 });
 mongoose.connect(
-  'mongodb+srv://vincerre:kinomaniak111@newwave.j13bl1e.mongodb.net/NewWave?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-  }
+  'mongodb+srv://vincerre:Kinomaniak111!@newwave.j13bl1e.mongodb.net/NewWave?retryWrites=true&w=majority',
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 const db = mongoose.connection;
 
